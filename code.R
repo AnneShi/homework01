@@ -20,6 +20,12 @@ heights %>%
             minimum = min(height),
             maximum = max(height))
 
+data("murders")
+
+us_murder_rate <- murders %>%
+  summarize(rate = sum(total) / sum(population) * 100000)
+
+us_murder_rate
 
 
 
